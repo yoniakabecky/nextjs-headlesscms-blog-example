@@ -1,12 +1,14 @@
-import styled from "styled-components";
-
-const Title = styled.h1`
-  font-size: 50px;
-  color: ${({ theme }) => theme.colors.primary};
-`;
+import Layout from "../components/Layout";
 
 interface Props {}
 
 export default function Home({}: Props) {
-  return <Title>Hello</Title>;
+  return (
+    <Layout>
+      <div>
+        <h1>Hello</h1>
+        <p>this is a demo site for headless cms website</p>
+      </div>
+    </Layout>
+  );
 }
