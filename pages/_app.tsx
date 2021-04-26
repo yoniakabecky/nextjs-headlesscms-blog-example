@@ -13,6 +13,13 @@ const GlobalStyle = createGlobalStyle`
   body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
+  a {
+    color: #333;
+
+    &:hover{
+      color: tomato;
+    }
+  }
 `;
 
 const theme = {

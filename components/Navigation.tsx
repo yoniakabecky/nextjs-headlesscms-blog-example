@@ -25,6 +25,13 @@ export default function Navigation({}: Props): ReactElement {
 const Root = styled.nav`
   width: 100%;
 
+  ul {
+    list-style: none;
+  }
+  li {
+    margin-bottom: 0.75rem;
+  }
+
   @media (min-width: 769px) {
     padding: 0 5rem;
     width: 30%;
