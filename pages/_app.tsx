@@ -15,10 +15,6 @@ const GlobalStyle = createGlobalStyle`
   }
   a {
     color: #333;
-
-    &:hover{
-      color: tomato;
-    }
   }
 `;
 

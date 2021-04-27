@@ -24,8 +24,6 @@ export default function BlogCard({
 }
 
 const Root = styled.div`
-  border: 1px solid gray;
-  border-radius: 0.5rem;
   width: 15rem;
   height: 15rem;
   overflow: hidden;
