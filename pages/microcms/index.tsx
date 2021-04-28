@@ -46,11 +46,11 @@ const Heading = styled.h1`
 `;
 
 const Description = styled.div`
-  margin: 2rem auto;
+  margin: 2rem 0;
 `;
 
 const CardWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
-  margin: 5rem auto 0;
+  margin: 5rem 0;
 `;
