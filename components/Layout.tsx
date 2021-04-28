@@ -23,22 +23,29 @@ export default function Layout({ children }: Props): ReactElement {
 }
 
 const Root = styled.div`
-  padding: 4rem 0;
   height: 100%;
+  overflow: scroll;
 
   @media (min-width: 769px) {
     display: flex;
     flex: 1 0 auto;
   }
+
+  @media (min-width: 1441px) {
+    margin: 0 auto;
+    max-width: 1440px;
+  }
 `;
 
 const Main = styled.main`
-  display: flex;
-  min-height: 100%;
+  position: relative;
+  overflow: auto;
 
   @media (min-width: 769px) {
+    display: flex;
+    flex-direction: column;
     flex: 1 0 auto;
-    padding: 0 2rem;
+    padding: 4rem 1rem 2rem 0;
     width: 70%;
   }
 `;
