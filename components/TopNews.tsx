@@ -32,22 +32,34 @@ export default function TopNews({ post }: Props): ReactElement {
 
 const Root = styled.div`
   display: flex;
+  flex-direction: column;
   margin: 2rem auto 5rem;
   cursor: pointer;
+
+  @media (min-width: 500px) {
+    flex-direction: row;
+  }
 `;
 
 const Img = styled.img`
-  width: 18rem;
+  width: 100%;
   height: auto;
   min-height: 10rem;
   object-fit: fill;
+
+  @media (min-width: 500px) {
+    width: 18rem;
+  }
 `;
 
 const Text = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
-  margin-left: 2rem;
+
+  @media (min-width: 500px) {
+    margin-left: 2rem;
+  }
 `;
 
 const Title = styled.h2`

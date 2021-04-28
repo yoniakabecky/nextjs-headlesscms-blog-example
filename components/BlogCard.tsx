@@ -24,10 +24,16 @@ export default function BlogCard({
 }
 
 const Root = styled.div`
-  width: 15rem;
-  height: 15rem;
+  margin-bottom: 2rem;
+  width: 100%;
   overflow: hidden;
   cursor: pointer;
+
+  @media (min-width: 500px) {
+    margin-right: 1rem;
+    width: 15rem;
+    height: 15rem;
+  }
 `;
 
 const Figure = styled.figure`
@@ -53,6 +59,6 @@ const Detail = styled.div`
 
 const Published = styled.p`
   margin: 0.5rem auto;
-  color: gray;
+  color: ${(props) => props.theme.text};
   font-size: 0.75rem;
 `;

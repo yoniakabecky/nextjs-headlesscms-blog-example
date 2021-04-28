@@ -18,16 +18,16 @@ export default function LeftArrow(props: Props): ReactElement {
       <path
         d="M11 5L4 12L11 19"
         stroke="#333333"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M4 12H20"
         stroke="#333333"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );

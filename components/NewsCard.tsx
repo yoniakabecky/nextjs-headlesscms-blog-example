@@ -32,7 +32,6 @@ const Root = styled.div`
 const Img = styled.img`
   width: 8rem;
   height: auto;
-  min-height: 5rem;
   object-fit: fill;
 `;
 

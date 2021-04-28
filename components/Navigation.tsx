@@ -14,9 +14,11 @@ export default function Navigation({}: Props): ReactElement {
         <NavLink isActive={route === "/"}>
           <Link href="/">Home</Link>
         </NavLink>
+
         <NavLink isActive={route.startsWith("/microcms")}>
           <Link href="/microcms">Blogs</Link>
         </NavLink>
+
         <NavLink isActive={route.startsWith("/contentful")}>
           <Link href="/contentful">News</Link>
         </NavLink>
@@ -29,7 +31,10 @@ const Root = styled.nav`
   width: 100%;
 
   ul {
+    display: flex;
+    justify-content: space-evenly;
     list-style: none;
+    margin-bottom: 2rem;
   }
   li {
     margin-bottom: 0.75rem;
@@ -39,9 +44,14 @@ const Root = styled.nav`
   }
 
   @media (min-width: 769px) {
-    padding: 0 5rem;
+    display: block;
+    padding: 4rem 5rem;
     width: 30%;
     height: 100%;
+
+    ul {
+      flex-direction: column;
+    }
   }
 `;
 
@@ -51,6 +61,6 @@ interface ListProps {
 
 const NavLink = styled.li<ListProps>`
   a {
-    color: ${(props) => (props.isActive ? "tomato" : "gray")};
+    color: ${(props) => (props.isActive ? props.theme.main : props.theme.text)};
   }
 `;

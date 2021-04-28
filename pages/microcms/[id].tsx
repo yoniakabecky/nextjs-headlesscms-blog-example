@@ -13,28 +13,26 @@ interface Props {
 export default function Blog({ data }: Props) {
   return (
     <Layout>
-      <div>
-        <Link href="/microcms">
-          <Back>
-            <div>
-              <LeftArrow />
-              <span>back</span>
-            </div>
-          </Back>
-        </Link>
+      <Link href="/microcms">
+        <Back>
+          <div>
+            <LeftArrow />
+            <span>back</span>
+          </div>
+        </Back>
+      </Link>
 
-        <Heading>{data.title}</Heading>
+      <Heading>{data.title}</Heading>
 
-        <Published>Published: {data.publishedAt.split("T")[0]}</Published>
+      <Published>Published: {data.publishedAt.split("T")[0]}</Published>
 
-        {data.image && <Image src={data.image.url} alt="" />}
+      {data.image && <Image src={data.image.url} alt="" />}
 
-        <Body
-          dangerouslySetInnerHTML={{
-            __html: `${data.body}`,
-          }}
-        />
-      </div>
+      <Body
+        dangerouslySetInnerHTML={{
+          __html: `${data.body}`,
+        }}
+      />
     </Layout>
   );
 }
@@ -84,11 +82,15 @@ const Heading = styled.h1`
 const Body = styled.div`
   margin: 3rem auto;
   width: 100%;
+
+  p {
+    line-height: 1.5rem;
+  }
 `;
 
 const Published = styled.p`
-  margin: 0.5rem auto;
-  color: gray;
+  margin: 0.5rem 0;
+  color: ${(props) => props.theme.text};
   font-size: 0.85rem;
 `;
 

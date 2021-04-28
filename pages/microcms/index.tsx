@@ -14,21 +14,19 @@ interface Props {
 export default function MicroCMS({ data, blogs }: Props): ReactElement {
   return (
     <Layout>
-      <div>
-        <Heading>{data.title}</Heading>
+      <Heading>{data.title}</Heading>
 
-        <Description
-          dangerouslySetInnerHTML={{
-            __html: `${data.description}`,
-          }}
-        />
+      <Description
+        dangerouslySetInnerHTML={{
+          __html: `${data.description}`,
+        }}
+      />
 
-        <CardWrapper>
-          {blogs.map((blog) => (
-            <BlogCard {...blog} key={blog.id} />
-          ))}
-        </CardWrapper>
-      </div>
+      <CardWrapper>
+        {blogs.map((blog) => (
+          <BlogCard {...blog} key={blog.id} />
+        ))}
+      </CardWrapper>
     </Layout>
   );
 }
@@ -53,6 +51,6 @@ const Description = styled.div`
 
 const CardWrapper = styled.div`
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
   margin: 5rem auto 0;
 `;

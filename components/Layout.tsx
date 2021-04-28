@@ -23,12 +23,14 @@ export default function Layout({ children }: Props): ReactElement {
 }
 
 const Root = styled.div`
+  padding: 2rem;
   height: 100%;
   overflow: scroll;
 
   @media (min-width: 769px) {
     display: flex;
     flex: 1 0 auto;
+    padding: unset;
   }
 
   @media (min-width: 1441px) {
