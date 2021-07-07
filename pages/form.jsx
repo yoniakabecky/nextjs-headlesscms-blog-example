@@ -1,4 +1,6 @@
 import React, { ReactElement } from "react";
+import styled from "styled-components";
+import Layout from "../components/Layout";
 
 export default function form() {
   const [formz, setFormz] = React.useState(false);
@@ -25,12 +27,15 @@ export default function form() {
   };
 
   return (
-    <div>
-      <iframe
-        src="https://ws.formzu.net/fgen/S10007989/"
-        style={{ height: "100vh", maxWidth: "100vw", width: "100%", border: 0 }}
-        onLoad={onLoad}
-      ></iframe>
-    </div>
+    <Layout>
+      <Form src="https://ws.formzu.net/fgen/S10007989/" onLoad={onLoad} />
+    </Layout>
   );
 }
+
+const Form = styled.iframe`
+  height: 100%;
+  max-height: 100vh;
+  max-width: 1000;
+  border: 0;
+`;
